@@ -7,6 +7,7 @@ Some of the subjects may be compulsory and others may be optional.
 Each student must have marks for compulsory subjects and for remaining columns if subject is opted by the student then marks will be there otherwise null.
 ![image](https://user-images.githubusercontent.com/89905014/183022518-d76696b6-5772-4b8f-9aff-385a75a38453.png)
 Username-Naman
+
 Password-1234
 
 Objective:  
