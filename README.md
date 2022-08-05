@@ -1,8 +1,5 @@
 # Result-Management-System
-Project 1: Result Analysis
-
 Input: 
-
 An excel or a csv file consisting of 1st column as student's roll number and subsequent 10 columns with subject codes as header and obtained marks in rows. 
 
 Some of the subjects may be compulsory and others may be optional. 
@@ -32,3 +29,5 @@ below 33% fail
 Required:
 
 A proper web interface with report generation[preferably in pdf is required]
+
+
