@@ -8,7 +8,7 @@ Each student must have marks for compulsory subjects and for remaining columns i
 
 Objective:  
 
-Create a proper web interface to upload file class-wise.[classes 6th to 10th only]
+Create a proper web interface to upload file class-wise.
 
 Once uploaded the website must be able to calculate follows:-
 
