@@ -1,0 +1,112 @@
+﻿{% extends 'layout/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <main id="main">
+        <div class="breadcrumbs" data-aos="fade-in">
+            <div class="container">
+                <h2>SHOW RESULT</h2>
+            </div>
+        </div>
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+                <div class="row mt-5 d-flex justify-content-center">
+                    <div class="col-lg-6 mt-5 mt-lg-0">
+                        <form action="{{ url_for('showresult') }}" method="post" role="form" class="php-email-form">
+                            {% include "includes/alert.html" %}
+                            <div class="form-group mt-3"> 
+                                <label for="class">Class</label>
+                                <select class="form-select form-control" name="class" id="class" required>
+                                    <option value="" selected>--Select Class--</option>
+                                    <option value="1">6th</option>
+                                    <option value="2">7th</option>
+                                    <option value="3">8th</option>
+                                    <option value="4">9th</option>
+                                    <option value="5">10th</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                            <label for="optradio">Option</label>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="1" checked>
+                                <label class="form-check-label" for="radio1">Status</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="2">
+                                <label class="form-check-label" for="radio2">Top</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="3">
+                                <label class="form-check-label" for="radio3">Lowest</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="4">
+                                <label class="form-check-label" for="radio4">Overall Result</label>
+                              </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="number">No. of records (not applicable in case of Status and Overall Result)</label>
+                                <input type="number" min="1" class="form-control" id="number" name="number" value="5" required>
+                            </div>
+                            <br>
+                            <div class="text-center"><button type="submit">Show</button></div>
+                        </form>
+                    </div>
+                </div>
+                {% if value %}
+                <div class="row mt-5" id="divpdfresult">
+                    <div class="col-lg-12 mt-5 table-responsive">
+                        <button class="downloadbtn btn btn-outline-primary float-end" onclick="getPDF('divpdfresult', 'result');">Download PDF</button>
+                        <table class="table"> 
+                            <thead> 
+                            <tr> 
+                                <th>Name</th> 
+                                <th>Total Marks</th> 
+                                <th>Mark Obtained</th> 
+                                <th>Percentage</th>
+                                <th>Division</th>
+                            </tr> 
+                            </thead> 
+                            <tbody> 
+                                {% for row in value %}  
+                                    <tr> 
+                                        <td>{{row["name"]}}</td>
+                                        <td>{{row["total_marks"]}}</td>
+                                        <td>{{row["mark_obtained"]}}</td>
+                                        <td>{{row["percentage"]}}</td>
+                                        <td>{{row["division"]}}</td>
+                                    </tr> 
+                                {% endfor %} 
+                            </tbody> 
+                        </table> 
+                    </div>
+                </div>
+                {% endif %}
+                {% if status %}
+                <div class="row mt-5" id="divpdfsummary">
+                    <div class="col-lg-12 mt-5 table-responsive">
+                        <button class="downloadbtn btn btn-outline-primary float-end" onclick="getPDF('divpdfsummary', 'summary');">Download PDF</button>
+                        <table class="table"> 
+                            <thead> 
+                            <tr> 
+                                <th>Total Passed</th> 
+                                <th>Total Failed</th>
+                            </tr> 
+                            </thead> 
+                            <tbody> 
+                                {% for row in status %}  
+                                    <tr> 
+                                        <td>{{row["passed"]}}</td>
+                                        <td>{{row["failed"]}}</td>
+                                    </tr> 
+                                {% endfor %} 
+                            </tbody> 
+                        </table> 
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+    {% endblock %} 
