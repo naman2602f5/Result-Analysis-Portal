@@ -8,6 +8,7 @@ Each student must have marks for compulsory subjects and for remaining columns i
 ![image](https://user-images.githubusercontent.com/89905014/183022518-d76696b6-5772-4b8f-9aff-385a75a38453.png)
 Username-Naman
 Password-1234
+
 Objective:  
 
 Create a proper web interface to upload file class-wise.
@@ -31,5 +32,8 @@ below 33% fail
 Required:
 
 A proper web interface with report generation[preferably in pdf is required]
+
+![image](https://user-images.githubusercontent.com/89905014/183022822-d76157e1-36cf-42d0-a722-3d3bb071af35.png)
+
 
 
