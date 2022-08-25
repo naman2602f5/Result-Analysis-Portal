@@ -31,7 +31,7 @@ Required:
 
 A proper web interface with report generation[preferably in pdf is required]
 
-![image](https://user-images.githubusercontent.com/89905014/186697770-50720112-adb3-4175-b5c5-49a85015756e.png))
+![image](https://user-images.githubusercontent.com/89905014/186697770-50720112-adb3-4175-b5c5-49a85015756e.png)
 
 
 
