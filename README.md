@@ -1,4 +1,4 @@
-# Result-Management-System
+# Result-Analysis-Portal
 Input: 
 An excel or a csv file consisting of 1st column as student's roll number and subsequent 10 columns with subject codes as header and obtained marks in rows. 
 
