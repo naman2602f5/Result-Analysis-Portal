@@ -5,7 +5,7 @@ An excel or a csv file consisting of 1st column as student's roll number and sub
 Some of the subjects may be compulsory and others may be optional. 
 
 Each student must have marks for compulsory subjects and for remaining columns if subject is opted by the student then marks will be there otherwise null.
-![image](https://user-images.githubusercontent.com/89905014/186695855-6a0288c0-91ab-4506-aab2-c2bb33dcfcde.png)
+![image](https://user-images.githubusercontent.com/89905014/188403287-24a22ad6-7c11-480f-8b1f-04a5948407d0.png)
 
 Objective:  
 
